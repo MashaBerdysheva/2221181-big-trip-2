@@ -1,3 +1,4 @@
+
 import { humanizePointDueDate, duration, getDate, getTime } from '../utils.js';
 import { createElement } from '../render.js';
 
@@ -64,6 +65,7 @@ export default class RoutePointView {
 
   getTemplate () {
     return createRoutePointTemplate(this.points, this.destination, this.offers);
+
   }
 
   getElement() {
