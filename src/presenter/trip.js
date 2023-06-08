@@ -30,7 +30,8 @@ export default class TripEventsPresenter {
       this.#renderPoint(point);
     }
   }
-    #renderPoint (point) {
+
+  #renderPoint (point) {
     const pointComponent = new RoutePointView(point, this.#destinations, this.#offers);
     const editPointComponent = new EditingFormView(point, this.#destinations, this.#offers);
 
@@ -68,5 +69,5 @@ export default class TripEventsPresenter {
     });
 
     render(pointComponent, this.eventsList.element);
-  };
+  }
 }
