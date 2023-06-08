@@ -1,4 +1,3 @@
-
 import { humanizePointDueDate, duration, getDate, getTime } from '../utils.js';
 import { createElement } from '../render.js';
 
@@ -55,28 +54,31 @@ const createRoutePointTemplate = (point, destinations, offers) => {
   );
 };
 
-
 export default class RoutePointView {
+  #element = null;
+  #point = null;
+  #destination = null;
+  #offers = null;
   constructor(point, destination, offers) {
-    this.points = point;
-    this.destination = destination;
-    this.offers = offers;
+    this.#point = point;
+    this.#destination = destination;
+    this.#offers = offers;
   }
 
-  getTemplate () {
-    return createRoutePointTemplate(this.points, this.destination, this.offers);
+  get template () {
+    return createRoutePointTemplate(this.#point, this.#destination, this.#offers);
 
   }
 
-  getElement() {
-    if (!this.element){
-      this.element = createElement(this.getTemplate());
+  get element() {
+    if (!this.#element){
+      this.#element = createElement(this.template());
     }
 
-    return this.element;
+    return this.#element;
   }
 
   removeElement() {
-    this.element = null;
+    this.#element = null;
   }
 }
