@@ -145,7 +145,7 @@ export default class EditingFormView {
   }
 
   get template () {
-    return createEditFormTemplate(this.point, this.destination, this.offers);
+    return createEditFormTemplate(this.#point, this.#destination, this.#offers);
   }
 
   get element() {

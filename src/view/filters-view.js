@@ -21,13 +21,13 @@ const createFiltersTemplate = () => (
 export default class FiltersView {
   #element = null;
 
-  get #template() {
+  get template() {
     return createFiltersTemplate;
   }
 
   get element() {
     if (!this.#element){
-      this.#element = createElement(this.#template());
+      this.#element = createElement(this.template);
     }
 
     return this.#element;
