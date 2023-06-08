@@ -35,11 +35,11 @@ export default class TripEventsPresenter {
     const editPointComponent = new EditingFormView(point, this.#destinations, this.#offers);
 
     const replacePointToEditForm = () => {
-      this.eventsList.element.replaceChild(editPointComponent.element, pointComponent.element);
+      this.#eventsList.element.replaceChild(editPointComponent.element, pointComponent.element);
     };
 
     const replaceEditFormToPoint = () => {
-      this.eventsList.element.replaceChild(pointComponent.element, editPointComponent.element);
+      this.#eventsList.element.replaceChild(pointComponent.element, editPointComponent.element);
     };
 
     const onEscKeyDown = (evt) => {
