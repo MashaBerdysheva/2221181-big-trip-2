@@ -31,8 +31,10 @@
     "node": "16"
   },
   "dependencies": {
+    "@babel/eslint-parser": "^7.16.0",
     "css-loader": "^6.5.1",
     "dayjs": "^1.10.7",
+    "flatpickr": "^4.6.9",
     "html-webpack-plugin": "^5.5.2",
     "nanoid": "^3.3.4",
     "style-loader": "^3.3.1"
